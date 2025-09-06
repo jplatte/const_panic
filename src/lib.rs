@@ -236,6 +236,10 @@ mod const_default;
 
 pub mod utils;
 
+/// tests doc lints with `cargo doc --features="test rust_latest_stable derive"`
+#[cfg(feature = "test")]
+pub mod test_doc_lints;
+
 #[cfg(all(test, not(feature = "test")))]
 compile_error! {r##"please use cargo test --features "test""##}
 

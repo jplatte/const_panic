@@ -344,8 +344,14 @@ fn emit_inherent_impl(
     };
 
     quote!(
+        /// Provides the required `to_panicvals` method for
+        /// [`const_panic::fmt::PanicFmt` trait](trait@__cp_bCj7dq3Pud::fmt::PanicFmt)
+        #[automatically_derived]
         #impl_header
         {
+            /// Gets the `PanicVal`s for
+            /// [`const_panic`](__cp_bCj7dq3Pud)-based
+            /// formatting of this value.
             pub const fn to_panicvals(
                 &self,
                 mut fmtarg: __cp_bCj7dq3Pud::FmtArg,

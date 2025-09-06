@@ -1,3 +1,5 @@
+#![deny(missing_docs)]
+
 use const_panic::{FmtArg, PanicFmt};
 
 use const_panic::test_utils::MyPhantomData;

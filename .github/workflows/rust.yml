@@ -46,6 +46,9 @@ jobs:
         cd "${{github.workspace}}/"
         cargo build --no-default-features
         cargo build
+
+        cargo doc --features="test ${{env.rustv}} derive"
+
         cargo test --features "test"
         cargo test --no-default-features --features "test ${{env.rustv}}"
         cargo test --no-default-features --features "test ${{env.rustv}} non_basic"
