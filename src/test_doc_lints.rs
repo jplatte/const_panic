@@ -1,5 +1,5 @@
 ///
-#[derive(crate::PanicFmt)]
+#[cfg_attr(feature = "derive", derive(crate::PanicFmt))]
 pub enum Direction {
     ///
     Up,
