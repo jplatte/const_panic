@@ -1,3 +1,5 @@
+//!
+#![deny(missing_docs)]
 #![cfg(feature = "derive")]
 
 extern crate const_panic as cpanic;
